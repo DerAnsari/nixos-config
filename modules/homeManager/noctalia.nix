@@ -1,0 +1,9 @@
+{ config, pkgs, inputs, ... }:
+{
+  imports = [ inputs.noctalia.homeModules.default ];
+
+  programs.noctalia = {
+    enable = true;
+    settings = builtins.fromTOML (builtins.readFile ../../dotfiles/noctalia-settings.toml);
+  };
+}

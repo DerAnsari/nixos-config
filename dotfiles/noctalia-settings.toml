@@ -1,0 +1,221 @@
+[bar.default]
+border = "primary"
+border_width = 2.0
+center = [ "active_window" ]
+color = "tertiary"
+concave_edge_corners = false
+end = [
+    "clock",
+    "tray",
+    "spacer_1",
+    "audio_visualizer",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "control-center",
+    "session"
+]
+margin_edge = 10
+margin_ends = 10
+radius = 0
+start = [
+    "launcher",
+    "wallpaper",
+    "power_profile",
+    "clipboard",
+    "notifications",
+    "spacer_3",
+    "cpu",
+    "spacer_2",
+    "workspaces",
+    "spacer_4",
+    "media"
+]
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000004"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 640.0
+    cy = 618.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 240.0
+    box_width = 800.0
+    cx = 632.0
+    cy = 352.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background_opacity = 0.0
+        background_padding = 0
+        background_radius = 0
+        bands = 32
+        centered = false
+        color_1 = "primary"
+        color_2 = "hover"
+        mirrored = true
+        show_when_idle = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 192.0
+    box_width = 368.0
+    cx = 1080.0
+    cy = 112.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background_opacity = 0.0
+        background_radius = 0
+        color = "error"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 192.0
+    box_width = 336.0
+    cx = 184.0
+    cy = 112.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        background_opacity = 0.0
+        color = "error"
+
+[notification]
+scale = 0.80000000447034836
+
+[shell]
+avatar_path = "/home/plagus/Downloads/icon2.jpg"
+corner_radius_scale = 0.0
+font_family = "Iosevka Nerd Font"
+
+    [shell.panel]
+    clipboard_position = "auto"
+    control_center_placement = "floating"
+    open_near_click_clipboard = true
+    open_near_click_control_center = true
+    open_near_click_wallpaper = true
+    polkit_position = "auto"
+    wallpaper_placement = "floating"
+
+[theme]
+builtin = "Catppuccin"
+mode = "dark"
+source = "builtin"
+
+    [theme.templates]
+    builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "hyprland" ]
+
+[wallpaper]
+directory = "/home/plagus/Pictures/wallpapers"
+enabled = true
+
+    [wallpaper.default]
+    path = "/home/plagus/Pictures/wallpapers/kita-cat.png"
+
+    [wallpaper.last]
+    path = "/home/plagus/Pictures/wallpapers/kita-cat.png"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/plagus/Pictures/wallpapers/kita-cat.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/plagus/Pictures/wallpapers/kita-cat.png"
+
+[widget.media]
+artist_first = true
+
+[widget.spacer_1]
+type = "spacer"
+
+[widget.spacer_2]
+type = "spacer"
+
+[widget.spacer_3]
+type = "spacer"
+
+[widget.spacer_4]
+type = "spacer"
+
+[widget.workspaces]
+style = "minimal"

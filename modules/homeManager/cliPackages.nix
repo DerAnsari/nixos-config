@@ -5,6 +5,7 @@
     fastfetch
     cliphist
     gh
+    pywalfox-native
     lazygit
     ani-cli
     grim
@@ -23,10 +24,18 @@
     enable = true;
     enableZshIntegration = true;
   };
+
   programs.gh = {
     enable = true;
     settings = {
       git_protocol = "ssh";
     };
+  };
+
+  programs.firefox = {
+    enable = true;
+    nativeMessagingHosts = [
+      pkgs.pywalfox-native
+    ];
   };
 }

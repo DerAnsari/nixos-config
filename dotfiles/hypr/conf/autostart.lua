@@ -10,6 +10,7 @@
  hl.on("hyprland.start", function () 
    hl.exec_cmd("noctalia")
    hl.exec_cmd("wl-paste --watch cliphist store")
+   hl.exec_cmd("otd-daemon")
  end)
 
 
@@ -21,3 +22,4 @@
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("QT_QPA_PLATFORMTHEME", "qtct")

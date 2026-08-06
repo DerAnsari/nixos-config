@@ -10,6 +10,11 @@
     ../../modules/homeManager/hyprland-config.nix
     ../../modules/homeManager/btop.nix
     ../../modules/homeManager/zsh.nix
+    ../../modules/homeManager/zathura.nix
+    ../../modules/homeManager/icons.nix
+    ../../modules/homeManager/gtkNqt.nix
+    ../../modules/homeManager/firefox.nix
+    ../../modules/homeManager/fastfetch.nix
   ];
   home.username = "plagus";
   home.homeDirectory = "/home/plagus";

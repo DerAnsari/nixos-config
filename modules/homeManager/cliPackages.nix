@@ -13,6 +13,11 @@
     swappy
     playerctl
     brightnessctl
+    spotdl
+    (python3.withPackages (ps: with ps; [
+      pypresence
+      # Add other python libraries here if needed
+    ]))
   ];
 
   programs.eza = {

@@ -57,11 +57,28 @@
         "type": "github"
       }
     },
+    "nvim-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786120649,
+        "narHash": "sha256-kWZ19zeAmJ2+NK5xxTQr3hggBNkSJRB4xM5eRRIN000=",
+        "owner": "DerAnsari",
+        "repo": "neovim-config",
+        "rev": "6f7b5193bea52dd9d915ebf2088c01f653630acf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DerAnsari",
+        "repo": "neovim-config",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "noctalia": "noctalia"
+        "noctalia": "noctalia",
+        "nvim-config": "nvim-config"
       }
     }
   },

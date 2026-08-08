@@ -5,12 +5,16 @@
     fastfetch
     cliphist
     gh
+    ripgrep
     pywalfox-native
     lazygit
     ani-cli
     grim
     slurp
     swappy
+    gcc
+    tree-sitter
+    nodejs
     playerctl
     brightnessctl
     spotdl

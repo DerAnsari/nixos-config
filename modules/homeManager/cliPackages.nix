@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 {
   home.packages = with pkgs; [
     wofi
@@ -13,15 +13,36 @@
     slurp
     swappy
     gcc
+    gdb
+    clang-tools
     tree-sitter
     nodejs
     playerctl
     brightnessctl
     spotdl
-    (python3.withPackages (ps: with ps; [
-      pypresence
-      # Add other python libraries here if needed
-    ]))
+    (python3.withPackages (
+      ps: with ps; [
+        pypresence
+        # Add other python libraries here if needed
+      ]
+    ))
+    go
+
+    nil
+    lua-language-server
+    rust-analyzer
+    rustfmt
+    clang-tools
+    gopls
+    pyright
+    bash-language-server
+    yaml-language-server
+
+    stylua
+    black
+    ruff
+    shfmt
+    shellcheck
   ];
 
   programs.eza = {

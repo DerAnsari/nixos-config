@@ -24,6 +24,8 @@
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
 
+  programs.nix-ld.enable = true;
+
   main-user.enable = true;
   main-user.userName = "plagus";
 

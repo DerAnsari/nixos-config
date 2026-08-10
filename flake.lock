@@ -60,11 +60,11 @@
     "nvim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1786120649,
-        "narHash": "sha256-kWZ19zeAmJ2+NK5xxTQr3hggBNkSJRB4xM5eRRIN000=",
+        "lastModified": 1786367068,
+        "narHash": "sha256-6JXYzzNrEpstgGqLI+xIQ6icTkFmyODZb4LB/jABdTA=",
         "owner": "DerAnsari",
         "repo": "neovim-config",
-        "rev": "6f7b5193bea52dd9d915ebf2088c01f653630acf",
+        "rev": "3585225585c596887e8ff415341571dbff970bde",
         "type": "github"
       },
       "original": {

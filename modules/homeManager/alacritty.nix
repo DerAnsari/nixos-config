@@ -8,11 +8,15 @@
         size = 12.0;
       };
       window = {
-        padding = { x = 8; y = 8; };
+        opacity = 0.80;
+        padding = {
+          x = 8;
+          y = 8;
+        };
       };
-      
+
       general.import = [
-        "~/.config/alacritty/themes/noctalia.toml" 
+        "~/.config/alacritty/themes/noctalia.toml"
       ];
     };
   };

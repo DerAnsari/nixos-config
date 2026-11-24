@@ -5,7 +5,7 @@
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "ur_PK";
-    LC_IDENTIFICATION= "ur_PK";
+    LC_IDENTIFICATION = "ur_PK";
     LC_MEASUREMENT = "ur_PK";
     LC_MONETARY = "ur_PK";
     LC_NAME = "ur_PK";

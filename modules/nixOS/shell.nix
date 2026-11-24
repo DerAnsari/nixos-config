@@ -1,8 +1,14 @@
-{ config, pkgs, ... }:
 {
-  programs.zsh = {
-    enable = true;
-  };
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  programs.zsh.enable = true;
+  programs.zoxide.enable = true;
 
-  users.users."plagus".shell = pkgs.zsh;
+  users.users = lib.mkIf config.main-user.enable {
+    ${config.main-user.userName}.shell = pkgs.zsh;
+  };
 }

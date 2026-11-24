@@ -14,14 +14,28 @@
       url = "github:DerAnsari/neovim-config";
       flake = false;
     };
-  };
-  outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations.sophos = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/sophos/configuration.nix
-        inputs.home-manager.nixosModules.default
-      ];
+    lobo-grub-theme = {
+      url = "github:rats-scamper/LoboGrubTheme";
+      flake = false; # it's just a repo of files, not a flake
+    };
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    antigravity-nix = {
+      url = "github:jacopone/antigravity-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations.sophos = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/sophos/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+    };
 }

@@ -1,12 +1,16 @@
-{ lib, config, pkgs, ... }:
-
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   options = {
     main-user.enable = lib.mkEnableOption "enable user module";
 
     main-user.userName = lib.mkOption {
       default = "mainuser";
-      description = '' username '';
+      description = "username";
     };
   };
 
@@ -14,8 +18,13 @@
     users.users.${config.main-user.userName} = {
       isNormalUser = true;
       description = "mainuser";
-      extraGroups = ["networkmanager" "wheel" ];
-      packages = with pkgs; [];
+      extraGroups = [
+        "dialout"
+        "networkmanager"
+        "video"
+        "wheel"
+      ];
+      packages = with pkgs; [ ];
     };
   };
 }

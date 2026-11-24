@@ -1,48 +1,65 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
-    wofi
-    fastfetch
-    cliphist
-    gh
-    ripgrep
-    pywalfox-native
-    lazygit
+    # General CLI Utilities
     ani-cli
+    bat
+    ffmpeg
+    fzf
+    google-antigravity-cli
+    lazygit
+    ripgrep
+
+    # Wayland & System CLI Utilities
+    brightnessctl
+    cliphist
     grim
+    playerctl
     slurp
-    swappy
+    wl-clipboard
+    wtype
+
+    # Compilers, Runtimes & Toolchains
+    android-tools
+    arduino-cli
+    cabal-install
     gcc
     gdb
-    clang-tools
-    tree-sitter
+    ghc
+    go
     nodejs
-    playerctl
-    brightnessctl
-    spotdl
     (python3.withPackages (
       ps: with ps; [
+        jupyterlab
+        matplotlib
+        numpy
+        pandas
         pypresence
-        # Add other python libraries here if needed
+        scipy
+        sympy
       ]
     ))
-    go
+    tree-sitter
 
-    nil
-    lua-language-server
-    rust-analyzer
-    rustfmt
+    # Language Servers (LSP)
+    bash-language-server
     clang-tools
     gopls
+    haskell-language-server
+    lua-language-server
+    nil
     pyright
-    bash-language-server
+    rust-analyzer
     yaml-language-server
 
-    stylua
+    # Formatters & Linters
     black
+    haskellPackages.ormolu
     ruff
-    shfmt
+    rustfmt
     shellcheck
+    shfmt
+    stylua
   ];
 
   programs.eza = {
@@ -60,12 +77,5 @@
     settings = {
       git_protocol = "ssh";
     };
-  };
-
-  programs.firefox = {
-    enable = true;
-    nativeMessagingHosts = [
-      pkgs.pywalfox-native
-    ];
   };
 }

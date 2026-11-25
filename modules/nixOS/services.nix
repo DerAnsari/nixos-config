@@ -6,6 +6,8 @@ in
 {
   services.flatpak.enable = true;
   services.tailscale.enable = true;
+  # Recommended by NixOS/Tailscale to prevent strict rpfilter from dropping UDP packets
+  networking.firewall.checkReversePath = "loose";
 
   services.syncthing = {
     enable = true;
